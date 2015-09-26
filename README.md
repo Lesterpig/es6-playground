@@ -8,7 +8,7 @@ In order to test ES6 features, please install Node.js v4.0.0+
 ## Usage
 
 Expected results are passed to the `assert` module.
-When running a script with `node <name>`, you whould not see any message.
+When running a script with `node <name>`, you would not see any message.
 
 ## Inspiration
 

@@ -1,5 +1,6 @@
 {
   "node": true,
-  "esnext" : true, // Allows ES6 features
-  "asi" : true     // Suppress warning about missing semi-colons
+  "esnext" : true,  // Allows ES6 features
+  "asi" : true,     // Suppress warning about missing semi-colons
+  "laxcomma" : true // Suppress warning about comma-first rows
 }

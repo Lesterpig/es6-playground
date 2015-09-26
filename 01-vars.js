@@ -8,7 +8,6 @@
  */
 
 'use strict'
-
 var equals = require('assert').strictEqual
 
 /* let
@@ -20,10 +19,14 @@ var i = 1
 
 if (true) {
   let i = 2
+  let j = 3
+  var k = 4
   equals(i, 2)
 }
 
 equals(i, 1)
+// j is undefined here
+equals(k, 4)
 
 /* const
  *
@@ -42,3 +45,15 @@ try {
 }
 
 equals(err, true)
+
+/* blocks
+ *
+ * You can now build blocks without keywords
+ */
+
+let a = false
+{
+  let a = true
+  equals(a, true)
+}
+equals(a, false)

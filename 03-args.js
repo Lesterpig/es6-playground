@@ -77,3 +77,25 @@ var equals = require('assert').deepStrictEqual
   equals(d, [{ foo: 'foo' }])
 
 }
+
+/* Destructuring objects
+ *
+ * Intuitive way to deals with objects as arguments, with default values
+ * VERY useful when dealing with options objects
+ */
+
+{
+  let fn = function({ optional, mode = 'r', aVeryLongKey : k, a : b = false }) {
+    return [optional, mode, k, b]
+  }
+
+  equals(fn({}), [undefined, 'r', undefined, false])
+  equals(fn({
+    optional       : true
+   ,mode           : 'w'
+   ,aVeryLongKey   : Infinity
+   ,a              : null
+  }), [true, 'w', Infinity, null])
+
+}
+
